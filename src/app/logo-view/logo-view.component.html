@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Company Logos</h2>
+    <div *ngIf="logos.length > 0; else noLogos">
+        <table mat-table [dataSource]="logos" class="mat-elevation-z8">
+            <ng-container matColumnDef="company">
+                <th mat-header-cell *matHeaderCellDef> Company </th>
+                <td mat-cell *matCellDef="let logo"> {{ logo.company }} </td>
+            </ng-container>
+            <ng-container matColumnDef="website">
+                <th mat-header-cell *matHeaderCellDef> Website </th>
+                <td mat-cell *matCellDef="let logo"> {{ logo.website }} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    <ng-template #noLogos>
+      <p>No logos uploaded yet. <a routerLink="/create">Upload a logo</a>.</p>
+    </ng-template>
+  </div>
+  

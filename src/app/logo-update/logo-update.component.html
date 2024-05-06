@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Update Logo</h2>
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Company" [(ngModel)]="company" name="company" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Website" [(ngModel)]="website" name="website" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Update</button>
+    </form>
+  </div>
+  

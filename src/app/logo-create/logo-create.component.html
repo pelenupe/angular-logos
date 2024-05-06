@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Upload a New Logo</h2>
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Company" [(ngModel)]="company" name="company" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Website" [(ngModel)]="website" name="website" required>
+      </mat-form-field>
+      <input type="file" (change)="onFileSelected($event)">
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </div>
+  
